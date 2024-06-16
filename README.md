@@ -1,5 +1,9 @@
 # Ansible Set-Hostname Role
 
+[![Lint Ansible roles](https://github.com/francomile/ansible-role-set-hostname/actions/workflows/ansible_lint.yml/badge.svg)](https://github.com/francomile/ansible-role-set-hostname/actions/workflows/ansible_lint.yml)
+
+[![Release role to Ansible Galaxy](https://github.com/francomile/ansible-role-set-hostname/actions/workflows/push_to_galaxy.yml/badge.svg)](https://github.com/francomile/ansible-role-set-hostname/actions/workflows/push_to_galaxy.yml)
+
 ## Actions of the Role
 
 * Set hostname via systemd
