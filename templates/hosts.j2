@@ -1,0 +1,17 @@
+127.0.0.1 localhost
+127.0.0.1 localhost.localdomain localhost
+127.0.0.1 localhost4.localdomain4 localhost4
+
+# The following lines are desirable for IPv6 capable hosts
+::1 ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+ff02::3 ip6-allhosts
+
+{% if set_hostname_set_hosts_file %}
+{% for entry in set_hostname_hosts_list %}
+{{ set_hostname_hosts_list[entry].ip_address }} {{ set_hostname_hosts_list[entry].host_name }}
+{% endfor %}
+{% endif %}

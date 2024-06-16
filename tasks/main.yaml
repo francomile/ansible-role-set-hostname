@@ -1,0 +1,21 @@
+---
+- name: "Set hostname| Set the machine hostname"
+  ansible.builtin.hostname:
+    name: "{{ set_hostname_default_hostname }}"
+
+- name: "Set hostname | Copy /etc/hostname"
+  ansible.builtin.template:
+    src: "hostname.j2"
+    dest: "/etc/hostname"
+    mode: '0644'
+    owner: root
+    group: root
+
+- name: "Set hostname | Add entries to /etc/hosts"
+  ansible.builtin.template:
+    src: "hosts.j2"
+    dest: "/etc/hosts"
+    owner: root
+    group: root
+    mode: '0644'
+  when: (set_hostname_set_hosts_file | bool)

@@ -1,0 +1,25 @@
+---
+galaxy_info:
+  role_name: set-hostname
+  author: "Rubens Franco"
+  description: "Setup hostname and hosts file"
+  license: "GNU GENERAL PUBLIC LICENSE v2"
+  min_ansible_version: "2.9"
+  platforms:
+    - name: Ubuntu
+      versions:
+        - "jammy"
+        - "focal"
+        - "bionic"
+    - name: Debian
+      versions:
+        - "bullseye"
+        - "buster"
+    - name: EL
+      versions:
+        - "9"
+        - "8"
+  galaxy_tags:
+    - linux
+    - hostname
+dependencies: []

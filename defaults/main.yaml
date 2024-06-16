@@ -1,0 +1,8 @@
+---
+set_hostname_default_hostname: "{{ inventory_hostname }}"
+set_hostname_default_ip: "{{ ansible_default_ipv4.address | default(ansible_all_ipv4_addresses[0]) }}"
+set_hostname_set_hosts_file: false
+set_hostname_hosts_list:
+  entry0:
+    ip_address: "{{ default_ip }}"
+    host_name: "{{ inventory_hostname }}"
